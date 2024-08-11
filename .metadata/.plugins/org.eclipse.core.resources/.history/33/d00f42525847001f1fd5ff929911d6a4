@@ -1,0 +1,8 @@
+package com.spring.aop.demo;
+
+public class Account {
+
+	
+	 private String name;
+	    private String level;
+}

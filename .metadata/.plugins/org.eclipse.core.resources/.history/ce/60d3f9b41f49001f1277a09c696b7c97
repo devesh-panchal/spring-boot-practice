@@ -1,0 +1,51 @@
+package com.spring.aop.demo.aspect;
+
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+@Order(2)
+public class MyDemoLoggingAspect {
+
+//	@Pointcut("execution(*  com.spring.aop.demo.dao.*.*(..))")
+//	private void forDaoPackage() {
+//	}
+//
+//	@Pointcut("execution(* com.spring.aop.demo.dao.*.get*(..))")
+//	private void getter() {
+//	}
+//
+//	// create a pointcut for setter methods
+//	@Pointcut("execution(* com.spring.aop.demo.dao.*.set*(..))")
+//	private void setter() {
+//	}
+//	
+//    // create pointcut: include package ... exclude getter/setter
+//    @Pointcut("forDaoPackage() && !(getter() || setter())")
+//    private void forDaoPackageNoGetterSetter() {}
+//
+//	@Before("forDaoPackageNoGetterSetter()")
+//	public void beforeAddAccountAdvice() {
+//
+//		System.out.println("\n=====>>> Executing @before advice on method");
+//
+//	}
+//
+//	@After("forDaoPackageNoGetterSetter()")
+//	public void afterAddAccountAdvice() {
+//
+//		System.out.println("\n=====>>> Executing @after advice on method");
+//
+//	}
+	
+	 @Before("com.luv2code.aopdemo.aspect.LuvAopExpressions.forDaoPackageNoGetterSetter()")
+	    public void beforeAddAccountAdvice() {
+	        System.out.println("\n=====>>> Executing @Before advice on method");
+	    }
+
+}

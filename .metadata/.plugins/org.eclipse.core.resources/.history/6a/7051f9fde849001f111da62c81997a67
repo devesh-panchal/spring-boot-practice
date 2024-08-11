@@ -1,0 +1,5 @@
+package com.spring.aop.demo.service;
+
+public class TrafficFortuneServiceImpl {
+
+}

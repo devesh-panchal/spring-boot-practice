@@ -1,0 +1,15 @@
+package com.luv2code.springboot.thymeleafdemo.aspect;
+
+import java.util.logging.Logger;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class DemoLoggingAspect {
+	
+    private Logger myLogger = Logger.getLogger(getClass().getName());
+
+
+}

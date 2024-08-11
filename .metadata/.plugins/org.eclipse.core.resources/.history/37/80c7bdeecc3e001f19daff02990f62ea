@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+               xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>luv2code Company Home Page</title>
+</head>
+
+<body>
+
+    <h2>luv2code Company Home Page - Yoohoo - Silly Goose - NO SOUP!!!</h2>
+    <hr>
+    Welcome to the luv2code company home page!
+	
+	<hr>
+	
+	<p>
+	username <span sec:authentication="principal.username"></span>
+	
+	</p>
+	<hr>
+	
+	<p>
+	roles <span sec:authentication="principal.authorities"></span>
+	
+	</p>
+	<form action="#" th:action="@{/logout}" method="POST">
+		<input type="submit" value="logout"/>
+		
+		</form>
+
+</body>
+</html>

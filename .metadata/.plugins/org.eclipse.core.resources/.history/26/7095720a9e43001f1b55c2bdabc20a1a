@@ -1,0 +1,5 @@
+package com.spring.jpa.mappings.jpa_mappings.entity;
+
+public class Student {
+
+}
